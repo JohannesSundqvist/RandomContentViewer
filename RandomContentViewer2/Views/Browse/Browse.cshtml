@@ -1,0 +1,29 @@
+﻿@model RandomContentViewer2.Models.User
+@Html.Partial("Header")
+
+<h2>Get a random name, age and gender</h2>
+@if (Model != null)
+{
+<p><b>Name: </b>@Model.Username</p>
+<p><b>From: </b> @Model.Country</p>
+<p><b>Age:</b> @Model.Age </p>
+<p><b>Gender:</b> @Model.Gender </p>
+}
+<form method="POST">
+    <input type="submit" name="refreshPerson" class="btn btn-lg" value="Refresh" />
+</form>
+
+<br />
+<hr />
+<br />
+
+<h2>Get a random number</h2>
+<p>@ViewData["GetRandomNumber"]</p>
+
+<form method="POST">
+    <input type="submit" name="refreshNumber" class="btn btn-lg" value="Refresh" />
+</form>
+
+<br />
+<hr />
+<br />
